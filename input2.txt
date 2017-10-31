@@ -1,0 +1,30 @@
+#include<stdio.h>
+#define max 50
+#define x 100
+int fun();
+float fun1(int a);
+char fun2(int a, float b);
+int main()
+{
+printf("Inside main.");
+printf("Again inside main.");
+{
+printf("Inside block1.");
+}
+printf("Between block");
+{
+printf("Inside block2.");
+}
+}
+int fun()
+{
+printf("Inside fun.");
+}
+float fun1(int a)
+{
+printf("Inside fun1.");
+}
+char fun2(int a, float b)
+{
+printf("Inside fun2.");
+}

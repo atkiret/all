@@ -1,0 +1,11 @@
+student@icemcompproj1:~/cl1/b3$ bison -d ab.y
+student@icemcompproj1:~/cl1/b3$ mv ab.tab.h ab.h
+student@icemcompproj1:~/cl1/b3$ mv ab.tab.c ab.y.c
+student@icemcompproj1:~/cl1/b3$ flex -o ab.lex.c ab.l
+student@icemcompproj1:~/cl1/b3$ cc -g -o ab ab.lex.c ab.y.c -lm
+ab.l: In function ‘yylex’:
+ab.l:9:11: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ [0-9]+                {yylval = (int)yytext; return NUMBER;} 
+           ^
+student@icemcompproj1:~/cl1/b3$ ./ab < ab.txt
+( +  6 ( *  8  4 ))
